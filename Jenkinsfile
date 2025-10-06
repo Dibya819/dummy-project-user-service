@@ -34,7 +34,7 @@ tools {
         stage('Docker Build') {
             steps {
                 script {
-                    bat "docker build -t ${env.IMAGE_NAME}:${env.TAG} ."
+                    bat 'docker build -t userservice:latest .'
                 }
             }
         }

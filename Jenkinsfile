@@ -10,6 +10,7 @@ tools {
         SPRING_DATASOURCE_PASSWORD = 'password'
         IMAGE_NAME = 'userservice'
         TAG = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
+        EMAIL_RECIPIENTS = 'dibyabikashpradhan@gmail.com'
     }
 
     stages {

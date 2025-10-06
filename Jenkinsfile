@@ -17,9 +17,8 @@ tools {
             steps {
                 script {
                     retry(2) {
-                        def mvnHome = tool name: 'maven'
                         dir('UserService'){
-                        bat "${mvnHome}\\bin\\mvn clean package -DskipTests"
+                        bat 'mvn clean package -DskipTests'
                         }
                     }
                 }

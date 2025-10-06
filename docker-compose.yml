@@ -14,21 +14,18 @@ services:
     volumes:
       - ./data:/var/lib/mysql
 
-
   userservice:
-    image: userservice
+    image: ${IMAGE_NAME}:${TAG}
     container_name: userservice
     restart: always
     ports:
-      - "8080:8080"
+      - "8081:8080"
     depends_on:
       - mysql
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/userDB
-      - SPRING_DATASOURCE_USERNAME=mysqluser
-      - SPRING_DATASOURCE_PASSWORD=password
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
 
 volumes:
   mysql-data:
-
-

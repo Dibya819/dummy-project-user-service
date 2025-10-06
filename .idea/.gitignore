@@ -1,26 +1,4 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-# IntelliJ IDEA files
-.idea/
-
-# Build and target folders
-target/
-out/
-
-# OS-specific files
-*.log
-*.class
-
-# Docker and local environment
-docker/
-data/
-*.env
-
-# Maven wrapper and dependencies
-.mvn/
-*.iml
-
-# Misc
-*.DS_Store
 

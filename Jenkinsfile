@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+tools {
+        jdk 'JDK21'
+        maven 'maven'
+    }
     environment {
         SPRING_DATASOURCE_URL = 'jdbc:mysql://mysql:3306/userDB'
         SPRING_DATASOURCE_USERNAME = 'mysqluser'

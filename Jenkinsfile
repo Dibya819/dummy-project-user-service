@@ -15,7 +15,9 @@ pipeline {
                 script {
                     retry(2) {
                         def mvnHome = tool name: 'maven'
+                        dir('UserService'){
                         bat "${mvnHome}\\bin\\mvn clean package -DskipTests"
+                        }
                     }
                 }
             }

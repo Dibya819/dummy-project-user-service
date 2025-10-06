@@ -52,10 +52,16 @@ tools {
 
     post {
         success {
+        mail(
+        to: "${EMAIL_RECIPIENTS}",
+        subject: "Build Succeeded: ${currentBuild.fullDisplayName}",
+        body: "The Jenkins build was successful."
+        )
             echo 'Pipeline succeeded!'
         }
         failure {
             mail(
+            to: "${EMAIL_RECIPIENTS}",
                 subject: "Build Failed: ${currentBuild.fullDisplayName}",
                 body: "Check Jenkins build logs for details."
             )
